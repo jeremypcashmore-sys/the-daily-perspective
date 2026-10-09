@@ -1,0 +1,21 @@
+
+name: Daily Perspective News
+
+on:
+  schedule:
+    - cron: '0 16 * * *'
+      timezone: Pacific/Auckland
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm schedule
+        run: |
+          echo "The Daily Perspective"
+          echo "Scheduled for 5 am NZ time"
+          echo "News generation is not yet connected"
